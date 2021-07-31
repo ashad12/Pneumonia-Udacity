@@ -39,7 +39,7 @@ The [Inference](Inference.ipynb) file is prepared to assess the model performanc
 **A note on prediction:** check_dicom method reads the important data form DICOM file and compare it with the algorithm requirements such as age, scanned body part, and patient position. If any of the aforementioned requirements differ from the model’s predetermined values, instead of rejecting prediction, a warning message will be included in the final report indicating the discrepancy. To compare the result, *Study Description* from DICOM file is also printed.
 
 ### Phase 4: FDA Report
-A sample proposal is prepared based on FDA requirements that include model descriptions and results. Following points mentioned in [Udacity Project Description]( https://github.com/udacity/AIHCND_C2_Starter/blob/master/README.md) have been considered in the [Report](SampleFDAreport.pdf):
+A sample proposal is prepared based on FDA requirements that include model descriptions and results. Following points mentioned in [Udacity Project Description](https://github.com/udacity/AIHCND_C2_Starter/blob/master/README.md#4-fda--submission) have been considered in the [Report](SampleFDAreport.pdf):
 
 **1. General Information**
   - Intended Use statement for the model
