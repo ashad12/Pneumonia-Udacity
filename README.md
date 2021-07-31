@@ -42,41 +42,41 @@ The [Inference](Inference.ipynb) file is prepared to assess the model performanc
 A sample proposal is prepared based on FDA requirements that include model descriptions and results. Following points mentioned in [Udacity Project Description]( https://github.com/udacity/AIHCND_C2_Starter/blob/master/README.md) have been considered in the [Report](SampleFDAreport.pdf):
 
 1. General Information
-- Intended Use statement for the model
-- Indications for use that include target population and when the device could be utilized within a clinical workflow
-- Device limitations, including diseases/conditions/abnormalities for which the device has been found ineffective and should not be used
-- The impact of false positive or false negative on a patient
+  - Intended Use statement for the model
+  - Indications for use that include target population and when the device could be utilized within a clinical workflow
+  - Device limitations, including diseases/conditions/abnormalities for which the device has been found ineffective and should not be used
+  - The impact of false positive or false negative on a patient
 
 2. Algorithm Design and Function
-The fully trained algorithm is described along with the DICOM header checks based on which the model is built. The presented flowchart describes the following:
--	Pre-algorithm performed on DICOM files
--	Preprocessing steps performed by the algorithm on the original images (e.g. normalization)
--	The architecture of the classifier
+  The fully trained algorithm is described along with the DICOM header checks based on which the model is built. The presented flowchart describes the following:
+  -	Pre-algorithm performed on DICOM files
+  -	Preprocessing steps performed by the algorithm on the original images (e.g. normalization)
+  -	The architecture of the classifier
 
 3. Algorithm Training
-Following parameters of the algorithm and how they were chosen are explained:
--	Types of augmentation used during training
--	Batch size
--	Optimizer learning rate
--	Layers of pre-existing architecture that were frozen
+  Following parameters of the algorithm and how they were chosen are explained:
+  -	Types of augmentation used during training
+  -	Batch size
+  -	Optimizer learning rate
+  -	Layers of pre-existing architecture that were frozen
 -	Layers of pre-existing architecture that were fine-tuned
 -	Layers added to pre-existing architecture
 
 Moreover, the behavior of the *training loss* and *validation loss* are presented. Final algorithm's performance after training was complete, is evaluated by a precision-recall curve on the validation set. Finally, the threshold for classification corresponding *F1* score, recall, and precision are reported.
 
 4. Databases
-Presenting information of patient in the database (including the training and validation datasets that are curated separately) as follows:
--	Size of the dataset
--	The number of positive cases and the its radio to the number of negative cases
--	The patient demographic data (as it is available)
--	The radiologic techniques used and views taken
--	The co-occurrence frequencies of pneumonia with other diseases and findings
+  Presenting information of patient in the database (including the training and validation datasets that are curated separately) as follows:
+  -	Size of the dataset
+  -	The number of positive cases and the its radio to the number of negative cases
+  -	The patient demographic data (as it is available)
+  -	The radiologic techniques used and views taken
+  -	The co-occurrence frequencies of pneumonia with other diseases and findings
 
 5. Ground Truth
-Exploring the benefits and limitations of the type of ground truth provided by NIH dataset.
+  Exploring the benefits and limitations of the type of ground truth provided by NIH dataset.
 
 6. FDA Validation Plan
-Following factors concerned with FDA Validation Plan are described:
--	Information of the patient population for imaging data such as *age* ranges, *sex*, type of *imaging modality*, *body part* imaged, *prevalence* of disease of interest,  and any other diseases that should be included or excluded as comorbidities in the population
--	Optimal ground truth determination
--	Selecting the performance standard 
+  Following factors concerned with FDA Validation Plan are described:
+  -	Information of the patient population for imaging data such as *age* ranges, *sex*, type of *imaging modality*, *body part* imaged, *prevalence* of disease of interest,  and any other diseases that should be included or excluded as comorbidities in the population
+  -	Optimal ground truth determination
+  -	Selecting the performance standard 
