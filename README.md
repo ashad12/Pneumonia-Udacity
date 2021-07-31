@@ -16,6 +16,7 @@ Chest X-ray images are provided by [Kaggle](https://www.kaggle.com/nih-chest-xra
 
 
 ### Phase 2: Building and Training the Model
+All the following procedures  are implemented in [Build and train model](Build\ and\ train\ model.ipynb).
 #### Data processing
 This starts with curating data according to EDA performed. First, each case is assigned with a pneumonia status label (binary value indicating whether pneumonia is diagnosed in the image). 
 Train and test dataset are created by taking into account the data demographic distribution in either dataset. The train dataset is composed on 50% positive pneumonia cases while the test dataset consists of 20% positive pneumonia cases to reflect real-life pneumonia case rates.
@@ -29,4 +30,6 @@ Using *transfer learning* technique, VGG16 model is loaded and last layer is tun
 Adam optimizer is chosen with initial learning rate (<img src="https://latex.codecogs.com/gif.latex?l_r"/>) of 0.001 and <img src="https://latex.codecogs.com/gif.latex?\beta_1=0.3"/>. the learning rate is set to decrease 10-fold upon 5 unchanged validation loss down to <img src="https://latex.codecogs.com/gif.latex?10^{-6}"/>. *Early stopping* criteria is set if no change is observed in validation loss after 12 attempts. Training is performed with 100 epochs and batch size of 32.
 
 The hyperparameters values have been set after several trails. Some of the attempts with different values are presented in the notebook file.
+
+Model evaluation parameters including *AUC* plot, *recall*, *precision*, and *accuracy* have been computed and the optimum classification threshold is found according to the maximum attained *F1* value.
 
