@@ -33,3 +33,7 @@ The hyperparameters values have been set after several trails. Some of the attem
 
 Model evaluation parameters including *AUC* plot, *recall*, *precision*, and *accuracy* have been computed and the optimum classification threshold is found according to the maximum attained *F1* value.
 
+### Phase 3: Testing & Postprocessing
+The [Inference](Inference.ipnyb) file is prepared to assess the model performance on 6 new, unseen X-ray  images. The code starts with reading the DICOM file followed by applying the preprocessing functions used in model training. The processed data are then fed to the model saved in training section to predict the presence of pneumonia. The result along with some info such as patient age and the assigned label are printed for conclusion.
+
+**A note on prediction:** check_dicom method reads the important data form DICOM file and compare it with the algorithm requirements such as age, scanned body part, and patient position. If any of the aforementioned requirements differ from the model’s predetermined values, instead of rejecting prediction, a warning message will be included in the final report indicating the discrepancy. To compare the result, *Study Description* from DICOM file is also printed.
