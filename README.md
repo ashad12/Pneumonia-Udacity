@@ -14,3 +14,9 @@ Chest X-ray images are provided by [Kaggle](https://www.kaggle.com/nih-chest-xra
 -	Number of diseases per patient
 -	Histogram analysis of the imaging data for healthy & disease states of interest and compare distributions across diseases.
 
+
+### Phase 2: Building and Training the Model
+#### Data processing
+This starts with curating data according to EDA performed. First, each case is assigned with a pneumonia status label (binary value indicating whether pneumonia is diagnosed in the image). 
+Train and test dataset are created by taking into account the data demographic distribution in either dataset. The train dataset is composed on 50% positive pneumonia cases while the test dataset consists of 20% positive pneumonia cases to reflect real-life pneumonia case rates.
+
