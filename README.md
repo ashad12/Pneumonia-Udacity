@@ -26,7 +26,7 @@ To improve the training, image augmentation is applied by adding shear, flips, e
 #### Model definition
 Using *transfer learning* technique, VGG16 model is loaded and last layer is tunned to specifically classify pneumonia data. Since this is a binary classification, loss and metric functions are set to *binary cross-entropy* and *binary accuracy*. 
 
-Adam optimizer is chosen with initial learning rate ($l_r$) of 0.001 and <img src="https://latex.codecogs.com/gif.latex?\beta_1=0.3"/>. the learning rate is set to decrease 10-fold upon 5 unchanged validation loss down to $10^{-6}$. *Early stopping* criteria is set if no change is observed in validation loss after 12 attempts. Training is performed with 100 epochs and batch size of 32.
+Adam optimizer is chosen with initial learning rate (<img src="https://latex.codecogs.com/gif.latex?l_r"/>) of 0.001 and <img src="https://latex.codecogs.com/gif.latex?\beta_1=0.3"/>. the learning rate is set to decrease 10-fold upon 5 unchanged validation loss down to <img src="https://latex.codecogs.com/gif.latex?10^{-6}"/>. *Early stopping* criteria is set if no change is observed in validation loss after 12 attempts. Training is performed with 100 epochs and batch size of 32.
 
 The hyperparameters values have been set after several trails. Some of the attempts with different values are presented in the notebook file.
 
