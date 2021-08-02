@@ -23,12 +23,20 @@ Chest X-ray images are provided by [Kaggle](https://www.kaggle.com/nih-chest-xra
   <figcaption><p align="center"> Pixel-level assessment of X-ray images </p></figcaption>
 </figure>
 
-
 ### Phase 2: Building and Training the Model
 All the following procedures  are implemented in [Build and train model](Build_and_train_model.ipynb).
 #### Data processing
 This starts with curating data according to EDA performed. First, each case is assigned with a pneumonia status label (binary value indicating whether pneumonia is diagnosed in the image). 
 Train and test dataset are created by taking into account the data demographic distribution in either dataset. The train dataset is composed on 50% positive pneumonia cases while the test dataset consists of 20% positive pneumonia cases to reflect real-life pneumonia case rates.
+
+<figure>
+  <p align="center">
+  <img
+  src="img/AgeGenDist.JPG"
+  alt="Age-Gender distribution">
+  </p>
+  <figcaption><p align="center"> Age-gender distributions of training and validation dataset </p></figcaption>
+</figure>
 
 #### Image preprocessing
 To improve the training, image augmentation is applied by adding shear, flips, etc. Moreover, a costume function is defined to initially crop the center to focus on the lung region. This allows for better image processing by eliminating tons of redundant information that would be extracted from unnecessary and irrelevant body parts such as arms and abdomen. The image is later normalized and standardized using mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225] which are the recommended values for VGG model.
