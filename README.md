@@ -14,6 +14,15 @@ Chest X-ray images are provided by [Kaggle](https://www.kaggle.com/nih-chest-xra
 -	Number of diseases per patient
 -	Histogram analysis of the imaging data for healthy & disease states of interest and compare distributions across diseases.
 
+<figure>
+  <p align="center">
+  <img
+  src="img/histogram.JPG"
+  alt="Histogram">
+  </p>
+  <figcaption><p align="center"> Pixel-level assessment of X-ray images </p></figcaption>
+</figure>
+
 
 ### Phase 2: Building and Training the Model
 All the following procedures  are implemented in [Build and train model](Build_and_train_model.ipynb).
