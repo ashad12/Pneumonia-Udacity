@@ -41,6 +41,15 @@ Train and test dataset are created by taking into account the data demographic d
 #### Image preprocessing
 To improve the training, image augmentation is applied by adding shear, flips, etc. Moreover, a costume function is defined to initially crop the center to focus on the lung region. This allows for better image processing by eliminating tons of redundant information that would be extracted from unnecessary and irrelevant body parts such as arms and abdomen. The image is later normalized and standardized using mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225] which are the recommended values for VGG model.
 
+<figure>
+  <p align="center">
+  <img
+  src="img/ImgPreproc.JPG"
+  alt="image preprocessing">
+  </p>
+  <figcaption><p align="center"> Image preprocessing; before and after focusing to the center region (lung zone) </p></figcaption>
+</figure>
+
 #### Model definition
 Using *transfer learning* technique, VGG16 model is loaded and last layer is tunned to specifically classify pneumonia data. Since this is a binary classification, loss and metric functions are set to *binary cross-entropy* and *binary accuracy*. 
 
